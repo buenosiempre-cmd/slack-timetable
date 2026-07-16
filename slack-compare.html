@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지금 쓰는 도구와 무엇이 다른가요?</title>
+<style>
+  :root{
+    --ink:#2C2C2B; --sub:#7D7A75; --canvas:#FFFFFF; --soft:#F9F8F7;
+    --border:#E6E5E3; --purple:#611f69; --purple-soft:#F3EAF4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink); background:var(--canvas);
+    padding:28px 24px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto}
+  .head{margin-bottom:24px}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.01em;line-height:1.25}
+  .legend{display:flex;gap:24px;margin-top:14px;flex-wrap:wrap}
+  .legend span{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:600;color:var(--sub)}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .dot.old{background:#C9C6C2}
+  .dot.new{background:var(--purple)}
+  .grid{display:flex;flex-direction:column;gap:12px}
+  .row{
+    display:grid;grid-template-columns:150px 1fr 40px 1fr;align-items:stretch;
+    border:1px solid var(--border);border-radius:12px;overflow:hidden;
+  }
+  .cat{
+    display:flex;align-items:center;gap:10px;
+    background:var(--purple);color:#fff;padding:18px 18px;
+  }
+  .cat .ic{font-size:22px}
+  .cat .lbl{font-size:18px;font-weight:700;line-height:1.25}
+  .cell{padding:18px 20px;display:flex;align-items:center;font-size:17px;line-height:1.5}
+  .old{background:var(--soft);color:var(--sub)}
+  .new{background:var(--purple-soft);color:var(--ink);font-weight:500}
+  .arrow{
+    display:flex;align-items:center;justify-content:center;
+    background:var(--soft);color:var(--purple);font-size:20px;font-weight:800;
+  }
+  @media (max-width:640px){
+    body{padding:20px 16px}
+    h1{font-size:24px}
+    .row{grid-template-columns:1fr;}
+    .cat{gap:10px}
+    .arrow{padding:6px 0;transform:rotate(90deg)}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>지금 쓰는 도구와 무엇이 다른가요?</h1>
+      <div class="legend">
+        <span><span class="dot old"></span>지금까지</span>
+        <span><span class="dot new"></span>Slack에서는</span>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="row">
+        <div class="cat"><span class="ic">🔎</span><span class="lbl">자료 찾기</span></div>
+        <div class="cell old">그룹웨어 · 공유 폴더 · 메일을 오가며 검색</div>
+        <div class="arrow">→</div>
+        <div class="cell new">한 공간에서 통합 검색하고 Slack AI에게 질문</div>
+      </div>
+      <div class="row">
+        <div class="cat"><span class="ic">📄</span><span class="lbl">문서 공유</span></div>
+        <div class="cell old">메일 · 단톡방에서 첨부파일을 주고받으며 버전 관리</div>
+        <div class="arrow">→</div>
+        <div class="cell new">채널에서 공유하고 캔버스로 최신 내용을 함께 편집</div>
+      </div>
+      <div class="row">
+        <div class="cat"><span class="ic">📊</span><span class="lbl">업무 현황</span></div>
+        <div class="cell old">엑셀 취합이나 개별 연락으로 따로 확인</div>
+        <div class="arrow">→</div>
+        <div class="cell new">채널 · 리스트 · 알림 연동으로 진행 상황을 실시간 파악</div>
+      </div>
+      <div class="row">
+        <div class="cat"><span class="ic">🔁</span><span class="lbl">반복 작업</span></div>
+        <div class="cell old">메일 작성 · 일정 알림 · 단순 질문에 매번 직접 대응</div>
+        <div class="arrow">→</div>
+        <div class="cell new">워크플로와 AI가 접수 · 알림 · 초안 · 질문 응답을 보조</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
